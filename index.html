@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myFullPage.js Demo</title>
+  <style>
+    body, html { margin: 0; padding: 0; overflow: hidden; }
+    .container { }
+    section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: #fff;
+    }
+    .s1 { background: #ff595e; }
+    .s2 { background: #ffca3a; }
+    .s3 { background: #8ac926; }
+    .s4 { background: #1982c4; }
+    .s5 { background: #6a4c93; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="s1">Section 1</section>
+    <section class="s2">Section 2</section>
+    <section class="s3">Section 3</section>
+    <section class="s4">Section 4</section>
+    <section class="s5">Section 5</section>
+  </div>
+
+  <script src="myFullPage.js"></script>
+  <script>
+    new MyFullPage(".container", {
+      speed: 700,
+      loop: true,
+      onLeave: (from, to) => console.log(`Leaving ${from} → Going to ${to}`),
+      afterLoad: (index) => console.log(`Loaded section ${index}`)
+    });
+  </script>
+</body>
+</html>
