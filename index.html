@@ -32,14 +32,12 @@
     <section class="s5">Section 5</section>
   </div>
 
-  <script src="myFullPage.js"></script>
-  <script>
-    new MyFullPage(".container", {
-      speed: 700,
-      loop: true,
-      onLeave: (from, to) => console.log(`Leaving ${from} → Going to ${to}`),
-      afterLoad: (index) => console.log(`Loaded section ${index}`)
-    });
-  </script>
+ <script src="https://cdn.jsdelivr.net/gh/imrupesh7/freefullpage/myFullPage.js"></script>
+<script>
+  new MyFullPage({
+    sectionSelector: ".section",
+    scrollSpeed: 700
+  });
+</script>
 </body>
 </html>
